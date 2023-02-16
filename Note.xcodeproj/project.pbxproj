@@ -14,6 +14,13 @@
 		84D67BF9292294A900AD3242 /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67BF8292294A900AD3242 /* NoteTests.swift */; };
 		84D67C03292294A900AD3242 /* NoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67C02292294A900AD3242 /* NoteUITests.swift */; };
 		84D67C05292294A900AD3242 /* NoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67C04292294A900AD3242 /* NoteUITestsLaunchTests.swift */; };
+		CB6C74E8299D0D9400922D3D /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C74E7299D0D9400922D3D /* NotesView.swift */; };
+		CB6C74EA299D0F3100922D3D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C74E9299D0F3100922D3D /* SearchBar.swift */; };
+		CB6C74EC299D118600922D3D /* NoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C74EB299D118600922D3D /* NoteCard.swift */; };
+		CB80AE63299C8D03003E572A /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB80AE62299C8D03003E572A /* Sidebar.swift */; };
+		CBDD7AAA299E47C70090DCB0 /* LabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD7AA9299E47C70090DCB0 /* LabelsView.swift */; };
+		CBDD7AAC299E486F0090DCB0 /* LabelEditItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD7AAB299E486F0090DCB0 /* LabelEditItem.swift */; };
+		CBDD7AAE299E4EFE0090DCB0 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD7AAD299E4EFE0090DCB0 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		84D67BFE292294A900AD3242 /* NoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D67C02292294A900AD3242 /* NoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITests.swift; sourceTree = "<group>"; };
 		84D67C04292294A900AD3242 /* NoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB6C74E7299D0D9400922D3D /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		CB6C74E9299D0F3100922D3D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CB6C74EB299D118600922D3D /* NoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCard.swift; sourceTree = "<group>"; };
+		CB80AE62299C8D03003E572A /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		CBDD7AA9299E47C70090DCB0 /* LabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsView.swift; sourceTree = "<group>"; };
+		CBDD7AAB299E486F0090DCB0 /* LabelEditItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelEditItem.swift; sourceTree = "<group>"; };
+		CBDD7AAD299E4EFE0090DCB0 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +108,7 @@
 		84D67BE6292294A700AD3242 /* Note */ = {
 			isa = PBXGroup;
 			children = (
-				84D67BE7292294A700AD3242 /* NoteApp.swift */,
-				84D67BE9292294A700AD3242 /* ContentView.swift */,
+				CB6C74E3299D0B4C00922D3D /* Presentation */,
 				84D67BEB292294A800AD3242 /* Assets.xcassets */,
 				84D67BED292294A800AD3242 /* Preview Content */,
 			);
@@ -125,6 +138,62 @@
 				84D67C04292294A900AD3242 /* NoteUITestsLaunchTests.swift */,
 			);
 			path = NoteUITests;
+			sourceTree = "<group>";
+		};
+		CB6C74E3299D0B4C00922D3D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CB6C74E5299D0C1E00922D3D /* Ui */,
+				CB6C74E4299D0B8D00922D3D /* Components */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CB6C74E4299D0B8D00922D3D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CB80AE62299C8D03003E572A /* Sidebar.swift */,
+				CB6C74E9299D0F3100922D3D /* SearchBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CB6C74E5299D0C1E00922D3D /* Ui */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD7AA8299E47410090DCB0 /* Details */,
+				CBDD7AA7299E47310090DCB0 /* Labels */,
+				CB6C74E6299D0D7600922D3D /* Notes */,
+				84D67BE7292294A700AD3242 /* NoteApp.swift */,
+				84D67BE9292294A700AD3242 /* ContentView.swift */,
+			);
+			path = Ui;
+			sourceTree = "<group>";
+		};
+		CB6C74E6299D0D7600922D3D /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				CB6C74E7299D0D9400922D3D /* NotesView.swift */,
+				CB6C74EB299D118600922D3D /* NoteCard.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		CBDD7AA7299E47310090DCB0 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD7AA9299E47C70090DCB0 /* LabelsView.swift */,
+				CBDD7AAB299E486F0090DCB0 /* LabelEditItem.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		CBDD7AA8299E47410090DCB0 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				CBDD7AAD299E4EFE0090DCB0 /* DetailsView.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +326,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDD7AAC299E486F0090DCB0 /* LabelEditItem.swift in Sources */,
+				CBDD7AAE299E4EFE0090DCB0 /* DetailsView.swift in Sources */,
 				84D67BEA292294A700AD3242 /* ContentView.swift in Sources */,
+				CBDD7AAA299E47C70090DCB0 /* LabelsView.swift in Sources */,
+				CB80AE63299C8D03003E572A /* Sidebar.swift in Sources */,
+				CB6C74EA299D0F3100922D3D /* SearchBar.swift in Sources */,
+				CB6C74E8299D0D9400922D3D /* NotesView.swift in Sources */,
 				84D67BE8292294A700AD3242 /* NoteApp.swift in Sources */,
+				CB6C74EC299D118600922D3D /* NoteCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
