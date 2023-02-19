@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct HomeCardGrid: View {
-    
-    private var twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
+struct HomeNoteCardGrid: View {
     
     var body: some View {
         Grid {
@@ -17,28 +15,28 @@ struct HomeCardGrid: View {
                 NavigationLink {
                     NotesView()
                 } label: {
-                    HomeCard(text: "All", count: 6)
-                }.buttonStyle(PlainButtonStyle())
+                    HomeNoteCard(title: "Notes", count: 6, icon: "note", color: Color.green)
+                }
                 
                 NavigationLink {
                     NotesView()
                 } label: {
-                    HomeCard(text: "Reminders", count: 2)
-                }.buttonStyle(PlainButtonStyle())
+                    HomeNoteCard(title: "Reminders", count: 2, icon: "calendar", color: Color.yellow)
+                }
             }
             
             GridRow {
                 NavigationLink {
                     NotesView()
                 } label: {
-                    HomeCard(text: "Notes", count: 3)
-                }.buttonStyle(PlainButtonStyle())
+                    HomeNoteCard(title: "Archived", count: 3, icon: "archivebox", color: Color.blue)
+                }
                 
                 NavigationLink {
                     NotesView()
                 } label: {
-                    HomeCard(text: "Archived", count: 1)
-                }.buttonStyle(PlainButtonStyle())
+                    HomeNoteCard(title: "Deleted", count: 1, icon: "xmark.bin", color: Color.red)
+                }
             }
         }
         .padding()
@@ -47,6 +45,6 @@ struct HomeCardGrid: View {
 
 struct HomeCardGrid_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCardGrid()
+        HomeNoteCardGrid()
     }
 }
