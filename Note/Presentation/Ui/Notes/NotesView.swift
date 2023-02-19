@@ -12,25 +12,23 @@ struct NotesView: View {
     private var twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                LazyVGrid(columns: twoColumnGrid) {
-                    ForEach(0..<15) { item in
-                        NavigationLink {
-                            DetailsView()
-                        } label: {
-                            NoteCard()
-                        }
+        ScrollView {
+            LazyVGrid(columns: twoColumnGrid) {
+                ForEach(0..<15) { item in
+                    NavigationLink {
+                        DetailsView()
+                    } label: {
+                        NoteCard()
                     }
-                }.padding()
-            }
-            .navigationTitle("Notes")
-            .toolbar() {
-                Button {
-                    print("archive tapped")
-                } label: {
-                    Label("archive", systemImage: "archivebox")
                 }
+            }.padding()
+        }
+        .navigationTitle("Notes")
+        .toolbar() {
+            Button {
+                print("archive tapped")
+            } label: {
+                Label("archive", systemImage: "archivebox")
             }
         }
     }

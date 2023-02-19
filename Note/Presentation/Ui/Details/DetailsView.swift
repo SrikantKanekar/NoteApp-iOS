@@ -12,19 +12,18 @@ struct DetailsView: View {
     @State private var bodyText: String = "This is some editable text..."
     
     var body: some View {
-        NavigationView {
-            VStack {
-                TextField("Title", text: $titleText)
-                    .font(.largeTitle)
-                TextEditor(text: $bodyText)
-            }
-            .padding()
-            .toolbar {
-                Button {
-                    
-                } label: {
-                    Label("save", systemImage: "pencil")
-                }
+        VStack {
+            TextField("Title", text: $titleText)
+                .font(.largeTitle)
+            TextEditor(text: $bodyText)
+        }
+        .padding()
+        .navigationBarTitle("", displayMode: .inline)
+        .toolbar {
+            Button {
+                
+            } label: {
+                Label("save", systemImage: "pencil")
             }
         }
     }
