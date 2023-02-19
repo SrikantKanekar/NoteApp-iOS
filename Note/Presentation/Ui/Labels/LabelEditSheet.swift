@@ -9,9 +9,34 @@ import SwiftUI
 
 struct LabelEditSheet: View {
     @State private var labelName: String = ""
+    @Binding var isShowingSheet: Bool
     
     var body: some View {
         VStack {
+            HStack {
+                Button {
+                    isShowingSheet = false
+                } label: {
+                    Text("Cancel")
+                }
+                
+                Spacer()
+                
+                Text("Label")
+                    .font(.title2)
+                    .bold()
+                
+                Spacer()
+                
+                Button {
+                    isShowingSheet = false
+                } label: {
+                    Text("Done")
+                }
+            }
+            .padding(.horizontal, 6)
+            .padding(.bottom)
+            
             VStack(alignment: .center, spacing: 30) {
                 Image(systemName: "list.bullet")
                     .resizable()
@@ -45,6 +70,6 @@ struct LabelEditSheet: View {
 
 struct LabelEditItem_Previews: PreviewProvider {
     static var previews: some View {
-        LabelEditSheet()
+        LabelEditSheet(isShowingSheet: .constant(true))
     }
 }

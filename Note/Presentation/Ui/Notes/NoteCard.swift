@@ -9,26 +9,21 @@ import SwiftUI
 
 struct NoteCard: View {
     var body: some View {
-        VStack {
-            HStack {
-                VStack(alignment: .leading){
-                    Text("title")
-                        .font(.largeTitle)
-                        .foregroundColor(.black)
-                    Text("body")
-                        .font(.body)
-                        .foregroundColor(.gray)
-                }
-                Spacer()
+        HStack {
+            VStack(alignment: .leading){
+                Text("Title")
+                    .font(.largeTitle)
+                    .foregroundColor(.primary)
+                Text("This is a body")
+                    .font(.body)
+                    .foregroundColor(.secondary)
             }
+            Spacer()
         }
-        .frame(minHeight: 200, alignment: .topLeading)
+        .frame(minHeight: 150, alignment: .topLeading)
         .padding()
+        .background(Color("ListSurfaceColor"))
         .cornerRadius(10)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .stroke(lineWidth: 1)
-        )
     }
 }
 

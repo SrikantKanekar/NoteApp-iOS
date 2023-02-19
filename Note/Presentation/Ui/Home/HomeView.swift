@@ -37,7 +37,7 @@ struct HomeView: View {
                     isShowingSheet.toggle()
                 }
                 .sheet(isPresented: $isShowingSheet) {
-                    LabelEditSheet()
+                    LabelEditSheet(isShowingSheet: $isShowingSheet)
                 }
             }
         }
