@@ -31,7 +31,17 @@ struct HomeView: View {
                 NavigationLink {
                     DetailsView()
                 } label: {
-                    Text("New note")
+                    HStack {
+                        Image(systemName: "plus")
+                            .resizable()
+                            .frame(width: 14, height: 14)
+                            .foregroundColor(Color("BackgroundColor"))
+                            .padding(5)
+                            .background(.blue)
+                            .clipShape(Circle())
+                        Text("New note")
+                            .bold()
+                    }
                 }
                 Button("Add label") {
                     isShowingSheet.toggle()
