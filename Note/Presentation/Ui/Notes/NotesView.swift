@@ -13,9 +13,9 @@ struct NotesView: View {
             .navigationTitle("Notes")
             .toolbar() {
                 Button {
-                    print("archive tapped")
+
                 } label: {
-                    Label("archive", systemImage: "archivebox")
+                    Label("single column", systemImage: "rectangle.grid.1x2")
                 }
             }
             .background(Color("ListBackgroundColor"))

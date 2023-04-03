@@ -20,7 +20,7 @@ struct HomeLabelList: View {
             
             ForEach(1..<6) { label in
                 NavigationLink {
-                    Text("Label")
+                    NotesView()
                 } label: {
                     HStack {
                         Image(systemName: "list.bullet")
