@@ -116,6 +116,7 @@
 		84D67BE6292294A700AD3242 /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				CBB9EBF429D9B8AD00A61BA4 /* Model */,
 				CB6C74E3299D0B4C00922D3D /* Presentation */,
 				84D67BEB292294A800AD3242 /* Assets.xcassets */,
 				84D67BED292294A800AD3242 /* Preview Content */,
@@ -187,6 +188,21 @@
 				CBC97AAD29A2340600422205 /* NoteCardGrid.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		CBB9EBF429D9B8AD00A61BA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBB9EBF529D9B8CB00A61BA4 /* Enums */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CBB9EBF529D9B8CB00A61BA4 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		CBC9CC36299F3D3C004EDE35 /* Home */ = {
