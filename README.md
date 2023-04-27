@@ -4,4 +4,13 @@ A note taking iOS app that allows users to easily create, edit, and organize not
 
 Backend Api - https://github.com/SrikantKanekar/NoteApp-Api
 
-The app is in development....
+## Screenshots
+
+### Note screens
+
+<img src="/screenshots/home1.png" width="30%"> &nbsp; 
+<img src="/screenshots/list1.png" width="30%"> &nbsp; 
+<img src="/screenshots/label1.png" width="30%"> &nbsp; 
+
+<img src="/screenshots/detail1.png" width="30%"> &nbsp; 
+<img src="/screenshots/detail2.png" width="30%"> &nbsp; 
