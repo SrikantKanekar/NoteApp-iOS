@@ -9,8 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var text: String = ""
-    @State private var isShowingSheet: Bool = false
+    @StateObject private var viewModel = HomeViewModel()
 
     var body: some View {
         ScrollView {
@@ -18,7 +17,7 @@ struct HomeView: View {
             HomeLabelList()
         }
         .background(Color("ListBackgroundColor"))
-        .searchable(text: $text)
+        .searchable(text: $viewModel.text)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing){
                 Button {
@@ -44,10 +43,10 @@ struct HomeView: View {
                     }
                 }
                 Button("Add label") {
-                    isShowingSheet.toggle()
+                    viewModel.isShowingSheet.toggle()
                 }
-                .sheet(isPresented: $isShowingSheet) {
-                    LabelEditSheet(isShowingSheet: $isShowingSheet)
+                .sheet(isPresented: $viewModel.isShowingSheet) {
+                    LabelEditSheet(isShowingSheet: $viewModel.isShowingSheet)
                 }
             }
         }
