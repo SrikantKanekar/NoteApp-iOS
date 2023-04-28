@@ -20,6 +20,11 @@
 		CB6C74EA299D0F3100922D3D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C74E9299D0F3100922D3D /* SearchBar.swift */; };
 		CB6C74EC299D118600922D3D /* NoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C74EB299D118600922D3D /* NoteCard.swift */; };
 		CB80AE63299C8D03003E572A /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB80AE62299C8D03003E572A /* Sidebar.swift */; };
+		CB9DF99B29FB6B6E0036EFB6 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DF99A29FB6B6E0036EFB6 /* DetailsViewModel.swift */; };
+		CB9DF99D29FB6D1E0036EFB6 /* LabelEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DF99C29FB6D1E0036EFB6 /* LabelEditViewModel.swift */; };
+		CB9DF9A029FB6E340036EFB6 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DF99F29FB6E340036EFB6 /* NotesViewModel.swift */; };
+		CB9DF9A229FB70BB0036EFB6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DF9A129FB70BB0036EFB6 /* Note.swift */; };
+		CB9DF9A429FB72550036EFB6 /* NoteState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DF9A329FB72550036EFB6 /* NoteState.swift */; };
 		CBC97AAC29A2018400422205 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC97AAB29A2018400422205 /* HomeView.swift */; };
 		CBC97AAE29A2340600422205 /* NoteCardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC97AAD29A2340600422205 /* NoteCardGrid.swift */; };
 		CBC9CC38299F3D80004EDE35 /* HomeNoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9CC37299F3D80004EDE35 /* HomeNoteCard.swift */; };
@@ -62,6 +67,11 @@
 		CB6C74E9299D0F3100922D3D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CB6C74EB299D118600922D3D /* NoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCard.swift; sourceTree = "<group>"; };
 		CB80AE62299C8D03003E572A /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		CB9DF99A29FB6B6E0036EFB6 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		CB9DF99C29FB6D1E0036EFB6 /* LabelEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelEditViewModel.swift; sourceTree = "<group>"; };
+		CB9DF99F29FB6E340036EFB6 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		CB9DF9A129FB70BB0036EFB6 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Note.swift; path = Note/Presentation/Ui/Notes/Note.swift; sourceTree = SOURCE_ROOT; };
+		CB9DF9A329FB72550036EFB6 /* NoteState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteState.swift; path = Note/Presentation/Ui/Notes/NoteState.swift; sourceTree = SOURCE_ROOT; };
 		CBC97AAB29A2018400422205 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CBC97AAD29A2340600422205 /* NoteCardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCardGrid.swift; sourceTree = "<group>"; };
 		CBC9CC37299F3D80004EDE35 /* HomeNoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoteCard.swift; sourceTree = "<group>"; };
@@ -195,17 +205,27 @@
 		CB6C74E6299D0D7600922D3D /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				CB9DF99E29FB6DD10036EFB6 /* Components */,
 				CB6C74E7299D0D9400922D3D /* NotesView.swift */,
+				CB9DF99F29FB6E340036EFB6 /* NotesViewModel.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		CB9DF99E29FB6DD10036EFB6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
 				CB6C74EB299D118600922D3D /* NoteCard.swift */,
 				CBC97AAD29A2340600422205 /* NoteCardGrid.swift */,
 			);
-			path = Notes;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		CBB9EBF429D9B8AD00A61BA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				CBB9EBF529D9B8CB00A61BA4 /* Enums */,
+				CB9DF9A129FB70BB0036EFB6 /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +233,7 @@
 		CBB9EBF529D9B8CB00A61BA4 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				CB9DF9A329FB72550036EFB6 /* NoteState.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -231,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				CBDD7AAB299E486F0090DCB0 /* LabelEditSheet.swift */,
+				CB9DF99C29FB6D1E0036EFB6 /* LabelEditViewModel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -239,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				CBDD7AAD299E4EFE0090DCB0 /* DetailsView.swift */,
+				CB9DF99A29FB6B6E0036EFB6 /* DetailsViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -375,8 +398,13 @@
 			files = (
 				CBDD7AAC299E486F0090DCB0 /* LabelEditSheet.swift in Sources */,
 				CBDD7AAE299E4EFE0090DCB0 /* DetailsView.swift in Sources */,
+				CB9DF99B29FB6B6E0036EFB6 /* DetailsViewModel.swift in Sources */,
+				CB9DF9A029FB6E340036EFB6 /* NotesViewModel.swift in Sources */,
 				84D67BEA292294A700AD3242 /* ContentView.swift in Sources */,
+				CB9DF9A229FB70BB0036EFB6 /* Note.swift in Sources */,
+				CB9DF9A429FB72550036EFB6 /* NoteState.swift in Sources */,
 				CBDD7AAA299E47C70090DCB0 /* HomeLabelList.swift in Sources */,
+				CB9DF99D29FB6D1E0036EFB6 /* LabelEditViewModel.swift in Sources */,
 				CB3FE72829A0EDF1006690FB /* HomeNoteCardGrid.swift in Sources */,
 				CBC97AAE29A2340600422205 /* NoteCardGrid.swift in Sources */,
 				CBC9CC38299F3D80004EDE35 /* HomeNoteCard.swift in Sources */,

@@ -9,6 +9,6 @@ import Foundation
 
 final class HomeViewModel: ObservableObject {
     
-    @Published var text: String = ""
-    @Published var isShowingSheet: Bool = false
+    @Published var text = ""
+    @Published var isShowingSheet = false
 }

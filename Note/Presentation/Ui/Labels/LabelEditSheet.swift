@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct LabelEditSheet: View {
-    @State private var labelName: String = ""
+    
+    @StateObject private var viewModel = LabelEditViewModel()
     @Binding var isShowingSheet: Bool
     
     var body: some View {
@@ -46,7 +47,7 @@ struct LabelEditSheet: View {
                     .background(Color.blue)
                     .clipShape(Circle())
                 
-                TextField("Label Name", text: $labelName)
+                TextField("Label Name", text: $viewModel.labelName)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .foregroundColor(.secondary)

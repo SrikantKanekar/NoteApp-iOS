@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct DetailsView: View {
-    @State private var titleText: String = "Title"
-    @State private var bodyText: String = "This is some editable text..."
     
-    @State private var showingAddOptions: Bool = false
-    @State private var showingColorOptions: Bool = false
-    @State private var showingMoreOptions: Bool = false
+    @StateObject private var viewModel = DetailsViewModel()
     
     var body: some View {
         VStack {
-            TextField("Title", text: $titleText)
+            TextField("Title", text: $viewModel.titleText)
                 .font(.largeTitle)
-            TextEditor(text: $bodyText)
+            TextEditor(text: $viewModel.bodyText)
         }
         .padding()
         .navigationBarTitle("", displayMode: .inline)
@@ -44,13 +40,13 @@ struct DetailsView: View {
             ToolbarItemGroup(placement: .bottomBar) {
                 Button(
                     action: {
-                        showingAddOptions.toggle()
+                        viewModel.showingAddOptions.toggle()
                     },
                     label: {
                         Label("Add", systemImage: "plus.app")
                     }
                 )
-                .confirmationDialog("Add", isPresented: $showingAddOptions, titleVisibility: .hidden) {
+                .confirmationDialog("Add", isPresented: $viewModel.showingAddOptions, titleVisibility: .hidden) {
                     Button("Take photo") {}
                     Button("Add image") {}
                     Button("Drawing") {}
@@ -59,25 +55,25 @@ struct DetailsView: View {
                 }
                 Button(
                     action: {
-                        showingColorOptions.toggle()
+                        viewModel.showingColorOptions.toggle()
                     },
                     label: {
                         Label("Color", systemImage: "paintpalette")
                     }
                 )
-                .confirmationDialog("color", isPresented: $showingColorOptions, titleVisibility: .hidden) {
+                .confirmationDialog("color", isPresented: $viewModel.showingColorOptions, titleVisibility: .hidden) {
                     Button("Colour") {}
                     Button("Background") {}
                 }
                 Button(
                     action: {
-                        showingMoreOptions.toggle()
+                        viewModel.showingMoreOptions.toggle()
                     },
                     label: {
                         Label("More", systemImage: "ellipsis.circle")
                     }
                 )
-                .confirmationDialog("more", isPresented: $showingMoreOptions, titleVisibility: .hidden) {
+                .confirmationDialog("more", isPresented: $viewModel.showingMoreOptions, titleVisibility: .hidden) {
                     Button("Delete") {}
                     Button("Make a copy") {}
                     Button("Send") {}

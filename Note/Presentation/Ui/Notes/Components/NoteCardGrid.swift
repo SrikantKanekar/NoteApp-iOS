@@ -9,16 +9,17 @@ import SwiftUI
 
 struct NoteCardGrid: View {
     
+    @Binding var notes: [Note]
     let columns = Array(repeating: GridItem(.flexible(), spacing: 15, alignment: .center), count: 2)
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 15) {
-                ForEach(0..<15) { item in
+                ForEach(notes) { note in
                     NavigationLink {
                         DetailsView()
                     } label: {
-                        NoteCard()
+                        NoteCard(note: note)
                     }
                 }
             }
@@ -30,6 +31,7 @@ struct NoteCardGrid: View {
 
 struct NoteCardGrid_Previews: PreviewProvider {
     static var previews: some View {
-        NoteCardGrid()
+        @StateObject var viewModel = NotesViewModel()
+        NoteCardGrid(notes: $viewModel.notes)
     }
 }

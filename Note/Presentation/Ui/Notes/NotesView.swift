@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct NotesView: View {
+    
+    @StateObject private var viewModel = NotesViewModel()
+    
     var body: some View {
-        NoteCardGrid()
+        NoteCardGrid(notes: $viewModel.notes)
             .navigationTitle("Notes")
             .toolbar() {
                 Button {
